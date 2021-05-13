@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxplanjay/webpack-starter-kit.git"
+    "url": "git+https://Daria-Khrushch.github.io/goit-js-hw-10-food-service.git"
   },
   "keywords": [],
   "author": "Dar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
+    "url": "https://Daria-Khrushch.github.io/goit-js-hw-10-food-service/issues"
   },
   "homepage": "https://Daria-Khrushch.github.io/goit-js-hw-10-food-service",
   "devDependencies": {
