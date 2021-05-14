@@ -11,7 +11,7 @@ const Theme = {
 };
 
 const switchTheme = document.querySelector('#theme-switch-toggle');
-const body = document.querySelector('body');
+const body = document.body;
 
 switchTheme.addEventListener('change', changeTheme);
 
@@ -27,12 +27,12 @@ else {
 function changeTheme(evt) {
     if (evt.target.checked) {
         localStorage.setItem('theme', Theme.DARK);
+         body.classList.remove(Theme.LIGHT);
         body.classList.add(localStorage.getItem('theme'));
     }
     else {
         localStorage.setItem('theme', Theme.LIGHT);
         body.classList.remove(Theme.DARK);
-        body.classList.add(localStorage.getItem('theme'));
     }
 }
 
