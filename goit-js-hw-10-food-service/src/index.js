@@ -33,6 +33,7 @@ function changeTheme(evt) {
     else {
         localStorage.setItem('theme', Theme.LIGHT);
         body.classList.remove(Theme.DARK);
+        console.log('убираем тему ')
     }
 }
 
