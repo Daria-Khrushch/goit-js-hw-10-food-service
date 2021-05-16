@@ -2,7 +2,7 @@ import './styles.css';
 import menu from './menu.json';
 import menuTemlate from './templates/menu.hbs';
 
-const menuGallery = document.querySelector(".js-menu");
+const menuGallery = document.querySelector('.js-menu');
 menuGallery.insertAdjacentHTML('afterbegin', menuTemlate(menu));
 
 const Theme = {
@@ -13,27 +13,25 @@ const Theme = {
 const switchTheme = document.querySelector('#theme-switch-toggle');
 const body = document.body;
 
-switchTheme.addEventListener('change', changeTheme);
-
 if (localStorage.getItem('theme') === Theme.DARK) {
-    body.classList.toggle(Theme.DARK);
+    body.classList.add(Theme.DARK);
     switchTheme.checked = true;
 }
 else {
-    body.classList.toggle(Theme.LIGHT);
+    body.classList.add(Theme.LIGHT);
     switchTheme.checked = false;  
 }
-
+switchTheme.addEventListener('change', changeTheme);
 function changeTheme(evt) {
     if (evt.target.checked) {
         localStorage.setItem('theme', Theme.DARK);
-         body.classList.remove(Theme.LIGHT);
+        body.classList.remove(...body.classList);
         body.classList.add(localStorage.getItem('theme'));
     }
     else {
         localStorage.setItem('theme', Theme.LIGHT);
-        body.classList.remove(Theme.DARK);
-        console.log('убираем тему ')
+        body.classList.remove(...body.classList);
+        body.classList.add(Theme.LIGHT);
     }
 }
 
